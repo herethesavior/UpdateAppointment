@@ -119,7 +119,7 @@
                 // Callback once framework and app load
                 $Lightning.createComponent(
                     "lightning:flow", // top-level component of your app
-                    { recordId: recordId }, // attributes to set on the component when created
+                    [{ recordId: recordId }], // attributes to set on the component when created
                     "flowcontainer", // the DOM location to insert the component
                     function (component) {
                         component.startFlow("Bookable_Appointment_Update"); // API name of the Flow
