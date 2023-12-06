@@ -107,8 +107,11 @@
 <body>
     <script src="https://qut360--devdela53.sandbox.my.site.com/study/lightning/lightning.out.js"></script>
     <script>
-        var url = window.location.href;
-        var recordId = url.searchParams.get("recordId");
+        // Get the current URL
+        const currentUrl = new URL(window.location.href);
+        // Get the value of the 'recordId' parameter
+        var recordId = currentUrl.searchParams.get("recordId");
+
         $Lightning.use(
             "runtime_appointmentbooking:lightningOutGuest",
             function () {
