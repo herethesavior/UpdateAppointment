@@ -111,6 +111,7 @@
         const currentUrl = new URL(window.location.href);
         // Get the value of the 'recordId' parameter
         var recordId = currentUrl.searchParams.get("recordId");
+        console.log(recordId);
 
         $Lightning.use(
             "runtime_appointmentbooking:lightningOutGuest",
