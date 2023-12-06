@@ -113,20 +113,24 @@
         var recordId = currentUrl.searchParams.get("recordId");
         console.log(recordId);
 
-        $Lightning.use(
-            "runtime_appointmentbooking:lightningOutGuest",
-            function () {
-                // Callback once framework and app load
+        $Lightning.use("runtime_appointmentbooking:lightningOutGuest",    // name of the Lightning app
+            function() {
                 $Lightning.createComponent(
                     "lightning:flow", // top-level component of your app
-                    [{ recordId: recordId }], // attributes to set on the component when created
-                    "flowcontainer", // the DOM location to insert the component
-                    function (component) {
-                        component.startFlow("Bookable_Appointment_Update"); // API name of the Flow
+                    { },                
+                    "flowcontainer",   // the DOM location to insert the component
+                    function(component) { // callback when component is created and active on the page
+                        var inputVariables = [
+                                        {
+                                            name : 'recordId',
+                                            type : 'String',
+                                            value : recordId
+                                        }
+                        ];       
+                        component.startFlow('Bookable_Appointment_Update',inputVariables);
                     }
                 );
-            },
-            "https://qut360--devdela53.sandbox.my.site.com/study" // Site endpoint
+            }, 'https://qut360--devdela53.sandbox.my.site.com/study'  // Community endpoint
         );
     </script>
 
