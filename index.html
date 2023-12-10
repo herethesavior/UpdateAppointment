@@ -1,112 +1,114 @@
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <!-- Set the viewport width to device width for mobile -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="https://www.qut.edu.au/__data/assets/css_file_folder/0018/707013/global-2017.min.css?0.3.481" media="all" />
-    <link rel="stylesheet" type="text/css" href="https://www.qut.edu.au/__data/assets/css_file_folder/0010/786961/qutex.min.css?0.9.38" media="all" />
-    <style>
-        .slds-visual-picker_vertical .slds-visual-picker__figure {
-            height: inherit !important;
-        }
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="https://www.qut.edu.au/__data/assets/css_file_folder/0018/707013/global-2017.min.css?0.3.481" media="all" />
+	<link rel="stylesheet" type="text/css" href="https://www.qut.edu.au/__data/assets/css_file_folder/0010/786961/qutex.min.css?0.9.38" media="all" />
+	<style>
+    .slds-visual-picker_vertical .slds-visual-picker__figure {
+        height: inherit !important;
+    }
 
-        .runtime_appointmentbookingFlowLocation .slds-visual-picker_vertical {
-            display: inline-flex !important;
-        }
-        #lexcontainer {
-            display: none;
-        }
+    .runtime_appointmentbookingFlowLocation .slds-visual-picker_vertical {
+        display: inline-flex !important;
+    }
+    #lexcontainer{
+        display: none;
+    }
 
-        body {
-            font-size: 17.3px !important;
-            line-height: 21px !important;
-            font-family: "proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
-            font-weight: 400 !important;
-            -webkit-font-smoothing: antialiased !important;
-        }
+    body {
+        font-size: 17.3px !important;
+        line-height: 21px !important;
+        font-family: "proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+        font-weight: 400 !important;
+        -webkit-font-smoothing: antialiased !important;
+    }
 
-        .slds-form-element__label {
-            font-size: 16px !important;
-        }
+    .slds-form-element__label {
+        font-size: 16px !important;
+    }
 
-        .slds-select_container .slds-select {
-            border: 1px solid #0066b9;
-            border-radius: 0;
-            padding: 12.5px 1rem;
-            font-size: 16px;
-            color: #373a3c;
-            height: auto;
-        }
-        .slds-select {
-            background-image: url(https://www.qut.edu.au/__data/assets/file/0005/709052/arrow-down.svg), linear-gradient(to right, #e8eef3, #e8eef3);
-            background-position: calc(100% - 14px) 14px, 100% 0;
-            background-size: 18px 18px, 50px 100%;
-            background-repeat: no-repeat;
-            background-color: white;
-            cursor: pointer;
-            height: auto !important;
-            padding-right: 65px;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-        }
+    .slds-select_container .slds-select{
+        border: 1px solid #0066b9;
+        border-radius: 0;
+        padding: 12.5px 1rem;
+        font-size: 16px;
+        color: #373a3c;
+        height: auto;
+    }
+    .slds-select {
+        background-image: url(https://www.qut.edu.au/__data/assets/file/0005/709052/arrow-down.svg), linear-gradient(to right, #e8eef3, #e8eef3);
+        background-position: calc(100% - 14px) 14px, 100% 0;
+        background-size: 18px 18px, 50px 100%;
+        background-repeat: no-repeat;
+        background-color: white;
+        cursor: pointer;
+        height: auto !important;
+        padding-right: 65px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+ }
 
-        .slds-form-element__control.slds-grow input {
-            border: 1px solid #0066b9;
-            border-radius: 0;
-            padding: 12.5px 1rem;
-            font-size: 16px;
-            color: #373a3c;
-            height: auto;
-        }
+    .slds-form-element__control.slds-grow input{
+        border: 1px solid #0066b9;
+        border-radius: 0;
+        padding: 12.5px 1rem;
+        font-size: 16px;
+        color: #373a3c;
+        height: auto;
+    }
+    
+   .slds-has-error .slds-form-element__control.slds-grow input {
+        border: 1px solid rgb(234, 0, 30) !important;
+    }
 
-        .slds-has-error .slds-form-element__control.slds-grow input {
-            border: 1px solid rgb(234, 0, 30) !important;
-        }
+   .slds-select:hover {
+        background-image: url("https://www.qut.edu.au/__data/assets/file/0006/709053/arrow-down-white.svg"), linear-gradient(to right, #0066b9, #0066b9);
+    }
 
-        .slds-select:hover {
-            background-image: url("https://www.qut.edu.au/__data/assets/file/0006/709053/arrow-down-white.svg"), linear-gradient(to right, #0066b9, #0066b9);
-        }
+    .textarea-container{
+         --sds-c-textarea-sizing-min-height: 200px;
+    }
+    .slds-textarea {
+        border: 1px solid #0066b9 !important;
+        border-radius: 0 !important;
+        padding: 12.5px 1rem;
+        font-size: 16px !important;
+        color: #373a3c !important;
+    }
 
-        .textarea-container {
-            --sds-c-textarea-sizing-min-height: 200px;
-        }
-        .slds-textarea {
-            border: 1px solid #0066b9 !important;
-            border-radius: 0 !important;
-            padding: 12.5px 1rem;
-            font-size: 16px !important;
-            color: #373a3c !important;
-        }
+   span.slds-checkbox_faux {
+        border: 1px solid #0066b9 !important;
+    }
+    
+   span.slds-checkbox label {
+        margin-bottom: 0 !important;
+    }
 
-        span.slds-checkbox_faux {
-            border: 1px solid #0066b9 !important;
-        }
+  footer.slds-card__footer {
+    background: transparent !important;
+  }
 
-        span.slds-checkbox label {
-            margin-bottom: 0 !important;
-        }
-
-        footer.slds-card__footer {
-            background: transparent !important;
-        }
-
-        .slds-scope .slds-select_container:before,
-        .slds-scope .slds-select_container:after {
-            position: absolute;
-            content: "";
-            display: none !important;
-            right: var(--lwc-spacingXSmall, 0.5rem);
-            width: 0;
-            height: 0;
-            border-left: 3px solid transparent;
-            border-right: 3px solid transparent;
-            pointer-events: none;
-        }
-    </style>
+ .slds-scope .slds-select_container:before, .slds-scope .slds-select_container:after {
+        position: absolute;
+        content: '';
+        display: none !important;
+        right: var(--lwc-spacingXSmall,0.5rem);
+        width: 0;
+        height: 0;
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        pointer-events: none;
+    }
+    .slds-card__header.slds-grid.header {
+        background: transparent !important;
+    }
+</style>
 </head>
 <body>
-    <script src="https://qut360--devdela53.sandbox.my.site.com/study/lightning/lightning.out.js"></script>
-    <script>
+	<script src="https://qut360--sit.sandbox.my.site.com/study/lightning/lightning.out.js"></script>
+	<script>
         // Get the current URL
         const currentUrl = new URL(window.location.href);
         // Get the value of the 'recordId' parameter
@@ -130,15 +132,14 @@
                         component.startFlow('Bookable_Appointment_Update',inputVariables);
                     }
                 );
-            }, 'https://qut360--devdela53.sandbox.my.site.com/study'  // Community endpoint
+            }, 'https://qut360--sit.sandbox.my.site.com/study'  // Community endpoint
         );
     </script>
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-md-6" id="flowcontainer">
-                <h5>Update Appointment - DEVDELA53 Sandbox</h5>
-            </div>
-        </div>
-    </div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-md-6" id="flowcontainer">
+				<h5>Update Appointment - SIT Environment</h5>
+			</div>
+		</div>
+	</div>
 </body>
